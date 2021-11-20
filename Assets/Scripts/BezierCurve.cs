@@ -32,7 +32,7 @@ public class BezierCurve : Path
     }
     */
 
-    public override Vector3 GetPoint(float t, Space space = Space.World)
+    public override Vector3 GetPoint(float t)
     {
         float omt = 1f - t;
         float omt2 = omt * omt;
@@ -42,11 +42,46 @@ public class BezierCurve : Path
                   p2 * (3f * omt * t2) +
                   p3 * (t2 * t);
         // var ret = CubicLerp(p0, p1, p2, p3, t);
-        if (space == Space.World)
-        {
-            ret = transform.TransformPoint(ret);
-        }
-
         return ret;
+    }
+
+    public override Vector3 GetTangent(float t)
+    {
+        float omt = 1f - t;
+        float omt2 = omt * omt;
+        float t2 = t * t;
+        Vector3 tangent =
+            p0 * (-omt2) +
+            p1 * (3 * omt2 - 2 * omt) +
+            p2 * (-3 * t2 + 2 * t) +
+            p3 * (t2);
+        return tangent.normalized;
+    }
+
+    public override Vector3 GetNormal2D(float t)
+    {
+        Vector3 tng = GetTangent(t);
+        return new Vector3(-tng.y, tng.x, 0f);
+    }
+
+    public override Vector3 GetNormal3D(float t, Vector3 up)
+    {
+        Vector3 tng = GetTangent(t);
+        Vector3 binormal = Vector3.Cross(up, tng).normalized;
+        return Vector3.Cross(tng, binormal);
+    }
+
+    public override Quaternion GetOrientation2D(float t)
+    {
+        Vector3 tng = GetTangent(t);
+        Vector3 nrm = GetNormal2D(t);
+        return Quaternion.LookRotation(tng, nrm);
+    }
+
+    public override Quaternion GetOrientation3D(float t, Vector3 up)
+    {
+        Vector3 tng = GetTangent(t);
+        Vector3 nrm = GetNormal3D(t, up);
+        return Quaternion.LookRotation(tng, nrm);
     }
 }
