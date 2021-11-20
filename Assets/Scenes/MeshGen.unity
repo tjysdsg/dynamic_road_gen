@@ -425,7 +425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd301d3cbdf50f1459cbc7b0fac78493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: {fileID: 1084205448}
 --- !u!23 &1084205445
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -445,7 +444,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 12c2da2fd081dc04cb85c3776ed2f16a, type: 2}
+  - {fileID: 2100000, guid: 7668021ca08145b41a706a2d5585bf15, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
