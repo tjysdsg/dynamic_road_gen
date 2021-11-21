@@ -25,37 +25,37 @@ public class ExtrudeShape
             {
                 // |
                 // |
-                new MeshVert(new Vector3(-0.5f, 0.3f, 0), new Vector3(-1, 0, 0), 0.2f),
+                new MeshVert(new Vector3(-0.5f, 0.3f, 0), new Vector3(-1, 0, 0), 0.0625f),
                 new MeshVert(new Vector3(-0.5f, 0, 0), new Vector3(-1, 0, 0), 0),
 
                 // ___
-                new MeshVert(new Vector3(-0.4f, 0.3f, 0), new Vector3(0, 1, 0), 0.3f),
-                new MeshVert(new Vector3(-0.5f, 0.3f, 0), new Vector3(0, 1, 0), 0.2f),
+                new MeshVert(new Vector3(-0.4f, 0.3f, 0), new Vector3(0, 1, 0), 0.0625f),
+                new MeshVert(new Vector3(-0.5f, 0.3f, 0), new Vector3(0, 1, 0), 0),
 
                 // \
-                new MeshVert(new Vector3(-0.3f, 0.2f, 0), new Vector3(1, 1, 0), 0.4f),
-                new MeshVert(new Vector3(-0.4f, 0.3f, 0), new Vector3(1, 1, 0), 0.3f),
+                new MeshVert(new Vector3(-0.3f, 0.2f, 0), new Vector3(1, 1, 0), 0.1f),
+                new MeshVert(new Vector3(-0.4f, 0.3f, 0), new Vector3(1, 1, 0), 0.0625f),
 
                 // ___
-                new MeshVert(new Vector3(0.3f, 0.2f, 0), new Vector3(0, 1, 0), 0.6f),
-                new MeshVert(new Vector3(-0.3f, 0.2f, 0), new Vector3(0, 1, 0), 0.4f),
+                new MeshVert(new Vector3(0.3f, 0.2f, 0), new Vector3(0, 1, 0), 0.436f),
+                new MeshVert(new Vector3(-0.3f, 0.2f, 0), new Vector3(0, 1, 0), 0.1f),
 
                 // /
-                new MeshVert(new Vector3(0.4f, 0.3f, 0), new Vector3(-1, 1, 0), 0.7f),
-                new MeshVert(new Vector3(0.3f, 0.2f, 0), new Vector3(-1, 1, 0), 0.6f),
+                new MeshVert(new Vector3(0.4f, 0.3f, 0), new Vector3(-1, 1, 0), 0.471f),
+                new MeshVert(new Vector3(0.3f, 0.2f, 0), new Vector3(-1, 1, 0), 0.436f),
 
                 // ___
-                new MeshVert(new Vector3(0.5f, 0.3f, 0), new Vector3(0, 1, 0), 0.8f),
-                new MeshVert(new Vector3(0.4f, 0.3f, 0), new Vector3(0, 1, 0), 0.7f),
+                new MeshVert(new Vector3(0.5f, 0.3f, 0), new Vector3(0, 1, 0), 0.0625f),
+                new MeshVert(new Vector3(0.4f, 0.3f, 0), new Vector3(0, 1, 0), 0),
 
                 // |
                 // |
-                new MeshVert(new Vector3(0.5f, 0, 0), new Vector3(1, 0, 0), 0.9f),
-                new MeshVert(new Vector3(0.5f, 0.3f, 0), new Vector3(1, 0, 0), 0.8f),
+                new MeshVert(new Vector3(0.5f, 0, 0), new Vector3(1, 0, 0), 0.0625f),
+                new MeshVert(new Vector3(0.5f, 0.3f, 0), new Vector3(1, 0, 0), 0),
 
                 // _____________
                 new MeshVert(new Vector3(-0.5f, 0, 0), new Vector3(0, -1, 0), 1),
-                new MeshVert(new Vector3(0.5f, 0, 0), new Vector3(0, -1, 0), 0.9f),
+                new MeshVert(new Vector3(0.5f, 0, 0), new Vector3(0, -1, 0), 0.471f),
             }
         };
     }

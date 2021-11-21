@@ -22,9 +22,16 @@ namespace Editor
             var p2 = trans.TransformPoint(curve.p2);
             var p3 = trans.TransformPoint(curve.p3);
 
+            // draw line between control points
+            Handles.color = Color.white;
+            Handles.DrawLine(p0, p1);
+            Handles.DrawLine(p1, p2);
+            Handles.DrawLine(p2, p3);
+
             // if selected, add handles to the points and use GREEN color
             if ((gizmoType & GizmoType.Selected) != 0)
             {
+                /*
                 var handleRotation = Tools.pivotRotation == PivotRotation.Local ? trans.rotation : Quaternion.identity;
                 EditorGUI.BeginChangeCheck();
                 p0 = Handles.DoPositionHandle(p0, handleRotation);
@@ -61,6 +68,7 @@ namespace Editor
                     EditorUtility.SetDirty(curve);
                     p3 = curve.p3 = trans.InverseTransformPoint(p3);
                 }
+                */
 
                 Handles.color = Color.green;
             }
