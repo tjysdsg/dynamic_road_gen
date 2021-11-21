@@ -4,6 +4,7 @@ using UnityEngine;
 public class RoadMeshGen : MonoBehaviour
 {
     private Path path;
+    private int edgeLoopPerTexture = 50;
 
     private void Start()
     {
@@ -47,7 +48,7 @@ public class RoadMeshGen : MonoBehaviour
         Mesh mesh = mf.sharedMesh;
         mesh.Clear();
 
-        for (int i = 0; i < orientedPoints.Length; i++)
+        for (int i = 0; i < edgeLoops; i++)
         {
             int offset = i * vertsInShape;
             for (int j = 0; j < vertsInShape; j++)
@@ -55,7 +56,7 @@ public class RoadMeshGen : MonoBehaviour
                 int id = offset + j;
                 vertices[id] = orientedPoints[i].LocalToWorld(shape.vert2Ds[j].point);
                 normals[id] = orientedPoints[i].LocalToWorldDirection(shape.vert2Ds[j].normal);
-                uvs[id] = new Vector2(shape.vert2Ds[j].uCoord, i / ((float)edgeLoops));
+                uvs[id] = new Vector2(shape.vert2Ds[j].uCoord, i / (float)edgeLoopPerTexture);
             }
         }
 
